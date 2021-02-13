@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+:root {
+    --main-blue: #000A14;
+    --main-gold: #876623;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 420vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar {
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(135, 102, 35,.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    
+    
+}
+
+#navbar .nav_container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar img {
+    margin-top: 10px;
+    width: 80px;
+}
+
+#navbar ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+#navbar ul li::after {
+    content: ' |' ;
+    color: white;
+    font-weight: 600;
+}
+
+#navbar ul li:last-child:after {
+    content: ' ';
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media only screen and (min-width:768px) {
+    
+    #navbar {
+        height: 15vh;
+    }
+    
+    #navbar .nav_container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #navbar img {
+        margin-top: 0;
+        margin-left: 15px;
+        width: 70px;
+        height: 65px;
+    }
+    
+    #navbar ul {
+        margin-right: 15px;
+    }
+    
+}
+
+.page_1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/background13.png);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 11;
+}
+
+.page_1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.5);
+}
+
+.page_1 .maint_container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+}
+
+.page_1 .maint_container h1 {
+    color: white;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+.page_1 .maint_container span {
+    color: var(--main-gold);
+    font-size: 1.5em; 
+}
+
+@media only screen and (min-width:768px) {
+    
+    .page_1 .maint_container h1 {
+        font-size: 6em;
+    }
+    
+    .page_1 .maint_container span {
+        color: var(--main-gold);
+        font-size: 3em; 
+    }
+}
+
+.page_2 {
+    width: 100%;
+    height: 120vh;
+    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_2 .shape_1 ,.shape_2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.page_2 .shape_2 {
+    z-index: 2;
+    bottom: 50px;
+    
+    
+}
+
+.page_2 .shape_1 {
+    top: 50px;
+    z-index: 1;
+}
+
+.page_2 .out_box,.out_box1 {
+    width: 90%;
+    height: 90%;
+    background-color: #876623;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.page_2 .box ,.box1{
+    width: 87%;
+    height: 87%;
+    background-color: #000A14;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.page_2 .box img{
+    width: 55%;
+    height: 55%;
+}
+
+.page_2 .box1 img {
+    display: none;
+    
+}
+
+.page_2 .box1 h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    
+}
+.page_2 .box1 span {
+    font-size: .7em;
+    width: 70%;
+    text-align: center;
+    
+}
+
+@media only screen and (min-width:768px) {
+    .page_2 {
+        height: 100vh;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    
+    .page_2 .shape_1 {
+        top: 0px;
+        left: -60px;
+        z-index: 1;
+    }
+    .page_2 .shape_2 {
+        top: 0px;
+        right:-60px;
+        z-index: 1;
+    }
+    
+    .page_2 .out_box,.out_box1 {
+        width: 90%;
+        height: 90%;
+    }
+    
+    .page_2 .box ,.box1{
+        width: 88%;
+        height: 88%;
+    }
+    
+    .page_2 .box img{
+        width: 55%;
+        height: 55%;
+    }
+    
+    
+    
+    .page_2 .box1 img {
+        display: block;
+        position: relative;
+        bottom: 20px;
+        width: 130px;
+        height: 100px;
+        
+    }
+    
+    .page_2 .box1 h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+    
+    .page_2 .box1 h2::before {
+        content: '- ';
+        color: #876623;
+    }
+    .page_2 .box1 h2::after {
+        content: ' -';
+        color: #876623;
+    }
+    
+    
+    .page_2 .box1 span {
+        font-size: 1em;
+        width: 60%;
+        text-align: center;
+        position: relative;
+        bottom: 30px;
+    }
+    
+}
+
+.page_3_4 {
+    height: 200vh;
+    width: 100%;
+    background-color: var(--main-blue);
+}
+
+#title_3_4 {
+    height: 20vh;
+    width: 100%; 
+    background-image: url(./img/background13.png);
+    position: relative;
+    background-attachment:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#title_3_4 h2 {
+    z-index: 4;
+    color: white;
+    font-size: 2em;    
+}
+
+#title_3_4 h2::before {
+    content: '- ';
+    color: #876623;
+}
+#title_3_4 h2::after {
+    content: ' -';
+    color: #876623;
+}
+
+#title_3_4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.5);
+    
+    
+}
+
+.content {
+    height: 180vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "project1" "project2" "project3" "project4";
+    grid-gap: 60px;
+    justify-items: center;
+    align-items: center;
+}
+
+.content div[class^="project"] {
+    width: 90%;
+    height: 90%;
+    margin-top: 30px;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+.content div[class^="project"] img {
+    height: 80%;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+.content div[class^="project"] h3 {
+    width: 100%;
+    height: 20%;
+    background: #876623;
+
+}
+
+
