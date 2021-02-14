@@ -99,6 +99,7 @@ body {
     height: 100vh;
     background-image: url(./img/background13.png);
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
@@ -306,6 +307,7 @@ body {
     width: 100%; 
     background-image: url(./img/background13.png);
             background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     background-attachment:fixed;
     display: flex;
@@ -388,6 +390,7 @@ body {
         height: 15vh;
         background-image: url(./img/background13.png);
         background-repeat: no-repeat;
+        background-size: cover;
     }
     
     .content {
