@@ -12,7 +12,7 @@
 }
 
 body {
-    height: 420vh;
+    height: 520vh;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -66,9 +66,14 @@ body {
 }
 
 @media only screen and (min-width:768px) {
+
+    body {
+        height: 420vh;
+        font-family: 'Poppins', sans-serif;
+    }
     
     #navbar {
-        height: 15vh;
+        height: 10vh;
     }
     
     #navbar .nav_container {
@@ -78,9 +83,9 @@ body {
     
     #navbar img {
         margin-top: 0;
-        margin-left: 15px;
-        width: 70px;
-        height: 65px;
+        margin-left: 10px;
+        width: 60px;
+        height: 50px;
     }
     
     #navbar ul {
@@ -98,7 +103,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 11;
+
 }
 
 .page_1::after {
@@ -328,9 +333,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0,.5);
-    
-    
+    background-color: rgba(0, 0, 0,.5);  
 }
 
 .content {
@@ -352,18 +355,201 @@ body {
     color: white;
     text-align: center;
 }
+.content div[class^="project"] a {
+    color: white;
+    text-decoration: none;
+}
 .content div[class^="project"] img {
     height: 80%;
     width: 100%;
     border-radius: 10px 10px 10px 10px;
-
+    
 }
 
 .content div[class^="project"] h3 {
     width: 100%;
     height: 20%;
+    line-height: 40px;
     background: #876623;
+    
+}
+
+@media only screen and (min-width:768px) {
+    
+    .page_3_4 {
+        height: 100vh;
+        width: 100%;
+        background-color: var(--main-blue);
+    }
+    
+    #title_3_4 {
+        height: 15vh;
+        background-image: url(./img/background13.png);
+    }
+    
+    .content {
+        height: 95vh;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        "project1 project2" 
+        "project3 project4";
+        grid-gap: 60px;
+        justify-items: center;
+        align-items: center;
+    }
 
 }
+
+#title_5 {
+    height: 40vh;
+    width: 100%; 
+    background-image: url(./img/background13.png);
+    position: relative;
+    background-attachment:fixed;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#title_5 h2 {
+    z-index: 4;
+    color: white;
+    font-size: 2em;    
+    margin-top: 10px;
+}
+
+#title_5 h2::before {
+    content: '- ';
+    color: #876623;
+}
+#title_5 h2::after {
+    content: ' -';
+    color: #876623;
+}
+
+#title_5::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.5);  
+}
+
+#title_5 img {
+    width: 150px;
+    margin-top: 10px;
+}
+#title_5 span {
+  color: white;
+  position: relative;
+  z-index: 5;
+  bottom: 65px;
+  font-weight: 600;
+}
+
+.title_5 {
+    height: 60vh;
+    background-color: #000A14;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.title_5 h3 {
+    color: white;
+    font-size: 1.8em;
+    margin-top: 60px;
+}
+.title_5 span {
+    color: white;
+    font-size: 1.4em;
+}
+
+.socialmedia {
+    display: grid;
+    grid-template-areas: "one . three" "four five six";
+}
+
+.socialmedia .one {
+    grid-area: one;
+}
+.socialmedia .two {
+    grid-area: three;
+}
+.socialmedia .three {
+    grid-area: four;
+}
+.socialmedia .four {
+    grid-area: five;
+}
+.socialmedia .five {
+    grid-area: six;
+}
+
+.title_5 a img {
+    width: 100px;
+    display: inline-block;
+}
+
+
+@media only screen and (min-width:768px) { 
+
+    #title_5 h2 {
+        z-index: 4;
+        color: white;
+        font-size: 3em;    
+        margin-top: 40px;
+    }
+
+    #title_5 img {
+        width: 110px;
+        margin-top: -5px;
+    
+    }
+
+    #title_5 span {
+        color: white;
+        position: relative;
+        z-index: 5;
+        bottom: 40px;
+        font-size: .7em;
+        font-weight: 600;
+      }
+
+      .title_5 {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title_5 h3 {
+        color: white;
+        font-size: 5em;
+        margin-top: 60px;
+    }
+    .title_5 span {
+        color: white;
+        font-size: 2.5em;
+    }
+
+    .title_5 a img {
+        width: 200px;
+        display: inline-block;
+    }
+
+    .socialmedia {
+        display: inline-block;
+
+    }
+}
+
+
 
 
